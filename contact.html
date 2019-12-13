@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  <title>The Bite Size Bakery</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class = "ui container">
+
+<header class = "ui segment">
+	<img src = "images/logo.jpg" alt="The Bite Size Bakery" class="ui middle aligned fluid image">
+</header>
+
+<nav class = "ui five item stackable menu">
+	<a class = "item" href = "index.html">Home</a>
+	<a class = "item" href = "gallery.html">Gallery</a>
+	<a class = "item" href = "https://www.facebook.com/StephAtTheBiteSizeBakery/" target= "_blank">Facebook</a>
+	<a class = "item" href = "https://www.instagram.com/stephatthebitesizebakery/" target = "_blank">Instagram</a>
+	<a class = "active item" href = "contact.html">Contact</a>
+</nav>
+
+<main class = "ui padded stackable grid">
+
+	<div class = "sixteen wide column">
+	<h2>Contact</h2>
+	</div>
+
+	<div class = "sixteen wide column" id = "contact">
+	To place an order or querie please contact Stephanie at one of the addresses below:
+	</div>
+
+	<table class = "ui celled collapsing table">
+		<tbody>
+			<tr>
+				<td>Email:</td>
+				<td><a href = "mailto:StephAtTheBiteSizeBakery@gmail.com" target = "blank">StephAtTheBiteSizeBakery@gmail.com</a></td>
+			</tr>
+			<tr>
+				<td>Phone no:</td>
+				<td>085 743 5670</td>
+			</tr>
+			<tr>
+				<td colspan = "2"><a href = "https://www.facebook.com/StephAtTheBiteSizeBakery/" target = "blank"> Facebook Messenger</a></td>
+			</tr>
+			<tr>
+				<td colspan = "2"><a href = "https://www.instagram.com/stephatthebitesizebakery/" target = "blank"> Instagram Direct Messaging</a></td>
+			</tr>
+		</tbody>
+	</table> 
+
+	<div class = "sixteen wide column" id = "order">
+	Alternatively, fill in your details below to place an order instantly!
+	<br>
+	<span id = "ordernote">	(This form is only for simple, standard orders. To order a custom celebration cake, please contact Stephanie directly.)</span>
+	</div>
+
+<form action="process.html" method = "get" class="ui responsive form">
+	<h3 class = "ui dividing header">Place an Order</h3>
+
+  <div class = "three fields">
+  	<div class = "field">
+    <label for="contactname">Contact Name</label>
+    <input type="text" name="contactname" id="contactname" pattern = "[A-Z][a-z]+( [A-Z][a-z]+)*" autofocus required title = "Please enter a name (Surname optional) with first letter capitalised">
+  	</div>
+
+  	<div class = "field">
+    <label for="phoneno">Telephone Number</label>
+    <input type="text" name="phoneno" id="phoneno" pattern = "^(\(\d{3}\)|\d{3})-?\d{6,9}$" required title = "Please enter a valid telephone number between 9 - 12 digits">
+  	</div>
+
+  	<div class = "field">
+    <label for="email">Email Address</label>
+    <input type="text" name="email" id="email" pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" required title = "Please enter a valid email address including @ and .">
+  	</div>
+  </div>
+
+  	<div class = "three fields">
+
+  		<div class = "field">
+  			<label for = "cupcakes">Please select the product(s) you would like to order</label>
+  			<div class = "ui fluid selection dropdown">
+  			<input type = "text" id = "cupcakes" name = "cupcakes" style ="display:none">
+  			<i class = "dropdown icon"></i>
+  			<div class = "default text">Cupcakes</div>
+  			<div class = "menu">
+  				<div class = "item" data-value = "NA">None</div>
+  				<div class = "item" data-value = "standard6">6 Standard Cupcakes €15</div>
+  				<div class = "item" data-value = "standard12">12 Standard Cupcakes €25</div>
+  				<div class = "item" data-value = "filled6">6 Filled Cupcakes €20</div>
+  				<div class = "item" data-value = "filled12">12 Filled Cupcakes €30</div>
+  				<div class = "item" data-value = "themed12">12 Themed Cupcakes €35</div>
+  				<div class = "item" data-value = "mini12">12 Mini Cupcakes €15</div>
+  				<div class = "item" data-value = "mini24">24 Mini Cupcakes €25</div>
+  			</div>
+  		</div>
+  	</div>
+
+  	<div class = "field">
+  			<label for = "desert">.</label>
+  			<div class = "ui fluid selection dropdown">
+  			<input type = "text" id = "desert" name = "desert" style ="display:none">
+  			<i class = "dropdown icon"></i>
+  			<div class = "default text">Tray Bakes and Deserts</div>
+  			<div class = "menu">
+  				<div class = "item" data-value = "NA">None</div>
+  				<div class = "item" data-value = "brownie">16 Brownie Squares €20</div>
+  				<div class = "item" data-value = "blondie">16 Blondie Squares €20</div>
+  				<div class = "item" data-value = "rockyroad">16 Rocky Road Squares €20</div>
+  				<div class = "item" data-value = "marsbar">16 Mars Bars Squares €20</div>
+  				<div class = "item" data-value = "carrotcake">16 Iced Carrot Cake Squares €25</div>
+  				<div class = "item" data-value = "pavlova">Fresh Fruit Pavlova €15</div>
+  				<div class = "item" data-value = "cheesecake">10 inch Cheesecake €20</div>
+  			</div>
+  		</div>
+  	</div>
+
+  	  	<div class = "field">
+  			<label for = "loaves">.</label>
+  			<div class = "ui fluid selection dropdown">
+  			<input type = "text" id = "loaves" name = "loves" style = "display:none">
+  			<i class = "dropdown icon"></i>
+  			<div class = "default text">Breads and Loaves</div>
+  			<div class = "menu">
+  				<div class = "item" data-value = "NA">None</div>
+  				<div class = "item" data-value = "guinness">2lb Multi-seed Guiness Bread €5</div>
+  				<div class = "item" data-value = "banana">2lb Banana & Walnut Bread €6</div>
+  				<div class = "item" data-value = "cvmarble">2lb Chocolate / Vanilla Marble Cake €7.50</div>
+  				<div class = "item" data-value = "comarble">2lb Chocolate / Orange Marble Cake €7.50</div>
+  				<div class = "item" data-value = "lemond">2lb Lemon Drizzle Cake €10</div>
+  				<div class = "item" data-value = "coffwal">2lb Iced Coffee & Walnut Cake €10</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+
+  	<div class = "field">
+    <label for="date">Date the products are required for (input 'ASAP' if no particular date required)</label>
+    <input type="text" name="date" id="date" class="three wide field" placeholder="mm/dd/yyyy" required>
+	</div>
+
+	<div class="field">
+ 		<label for = "additional">Any additional details (filling, flavour, design)</label>
+  		<textarea id = "additional" name = "additional"></textarea>
+	</div>
+
+	<div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" id = "TandC1"  name ="TandC1" required title = "Please tick this.">
+      <label for = "TandC1">I accept that order availability is not always guaranteed.</label>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" id = "TandC2"  name ="TandC2" required title = "Please tick this.">
+      <label for = "TandC2">I am available and willing to collect my order in Waterford, Ireland.</label>
+    </div>
+  </div>
+ 
+  <button class="ui button" type="submit">Submit</button>
+   <button class="ui button" type="reset">Clear form</button>
+</form>
+
+</main>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<script>
+ $('.ui.selection.dropdown').dropdown();
+</script>
+</body>
+</html>
